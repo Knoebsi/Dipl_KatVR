@@ -1,0 +1,40 @@
+#set page(margin: 2.5cm)
+
+#set text(font: "Noto Sans Adlam", size: 11pt)
+
+= Arbeitsprotokoll – 08.04.2026
+
+== Projektbeschreibung
+
+Im Rahmen der Diplomarbeit wird eine VR-Applikation mit der Engine Unity entwickelt. Die Anwendung ist für die Nutzung mit einem KatVR-System ausgelegt und stellt eine virtuelle Stadt dar, die vom Benutzer erkundet werden kann.
+
+Ein weiterer Fokus liegt auf der Integration von interaktiven Elementen, um die Benutzerführung innerhalb der virtuellen Umgebung zu verbessern.
+
+== Durchgeführte Arbeiten
+
+Der Schwerpunkt der heutigen Arbeit lag auf der Implementierung eines Wegmarkierungs-Systems zur Benutzerführung innerhalb der virtuellen Stadt.
+
+Zu Beginn wurde eine geeignete Struktur für zufällige Spawnpunkte in der bestehenden Szene geplant. Hierfür wurden mehrere leere GameObjects als potenzielle Spawnpunkte erstellt und an verschiedenen Positionen in der Map platziert.
+
+Anschließend wurde ein Script entwickelt, welches die zufällige Auswahl dieser Spawnpunkte ermöglicht. Dabei wurde sichergestellt, dass immer nur eine Wegmarkierung gleichzeitig aktiv ist und nach Erreichen automatisch eine neue generiert wird.
+
+Zusätzlich wurde ein Wegmarkierungs-Objekt erstellt, welches als visuelles Ziel für den Benutzer dient. Dieses wurde mit einem Trigger-Collider versehen, um die Interaktion mit dem Spieler zu ermöglichen.
+
+== Technische Umsetzung
+
+Die Umsetzung erfolgte mithilfe von C\#-Skripten innerhalb von Unity.
+
+Ein zentrales Script („WaypointSpawner“) verwaltet die Spawnpunkte und erzeugt die Wegmarkierungen an zufälligen Positionen. Dabei wird bei jeder Generierung ein neuer Spawnpunkt aus einer Liste ausgewählt.
+
+Ein weiteres Script („Waypoint“) erkennt über ein Trigger-Event, wenn der Spieler die Wegmarkierung erreicht. In diesem Fall wird die aktuelle Wegmarkierung entfernt und eine neue erzeugt.
+
+Zur Verbesserung der Logik wurde zusätzlich verhindert, dass dieselbe Position mehrfach hintereinander ausgewählt wird.
+
+== Zusammenfassung und Ausblick
+
+Durch die Implementierung des Wegmarkierungs-Systems konnte die Benutzerführung innerhalb der virtuellen Umgebung deutlich verbessert werden.
+
+Für die nächsten Arbeitsschritte ist geplant:
+- Anpassung des Systems für VR-spezifische Interaktionen (z. B. Controller oder Blicksteuerung)
+- Erweiterung um visuelles und akustisches Feedback
+- Integration eines Punktesystems oder Zeitmessung zur Steigerung der Interaktivität
